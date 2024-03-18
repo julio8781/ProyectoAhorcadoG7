@@ -1,2 +1,3 @@
 # ProyectoAhorcadoG7
-Juego del Ahorcado
+
+Juego del Ahorcado utilizando las tecnologías HTML, CSS y JS.
