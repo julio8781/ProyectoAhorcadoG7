@@ -1,63 +1,83 @@
-* {
+{
+	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
-}
-
-main {
-	/* display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(3, 100px); */
-	background-image: url("/img/fondo.png");
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-size: 26rem;
-}
-
-#titulo {
-	display: flex;
-}
-
-h1 {
-	position: relative;
-	left: 95px;
-	bottom: 12px;
-	font-family: "East Sea Dokdo", sans-serif;
-	font-weight: 900;
-	font-style: normal;
-	color: rgb(211, 216, 219);
-	font-size: 40px;
-}
-#imagen0 {
-	width: 150px;
-	height: 150px;
-	position: relative;
-	bottom: 40px;
-	left: 20px;
-}
-.col {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	justify-content: space-evenly;
-}
-
-#comenzarJuego {
-	width: 110px;
-}
-
-#pista {
-	width: 110px;
-}
-#darPista {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-#spanPista {
-	height: 50px;
-}
-@media (max-width: 932px) {
-	main {
-		width: 100%;
-		height: 100%;
-	}
-}
+  }
+  h1 {
+	  text-align: center;
+	  font-size: 40px;
+  }
+  .fuentePizarra {
+	  font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+	  font-family: "East Sea Dokdo", sans-serif;
+	  font-weight: 900;
+	  font-style: normal;
+	  color: rgb(211, 216, 219);
+  }
+  .main-container {
+	  max-width: 800px;
+	  margin: auto;
+  }
+  /* Comportamiento del main para imagenes de fondo*/
+  main {
+	  width: 430px;
+	  place-items: center;
+	  align-content: space-between;
+  }
+  
+  .wrapperImg {
+	  position: relative;
+	  top: 0;
+	  left: 0;
+	  z-index: -1;
+  }
+  
+  .imagenPizarra {
+	  width: 100%;
+	  height: auto;
+  }
+  .pizarra {
+	  display: grid;
+	  grid-template-rows: 10% 90%;
+	  position: absolute;
+	  top: 0;
+	  width: 100%;
+	  height: 100%;
+  }
+  .gridInterfaz {
+	  display: grid;
+	  grid-template-columns: 30% 70%;
+  }
+  .gridMensajes {
+	  display: grid;
+	  grid-template-rows: 50% 50%;
+  }
+  
+  
+  .mensajesWrapper {
+	  height: 100%;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  flex-direction: column;
+  }
+  
+  #mensajesErrorAcierto {
+	  width: 100%;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  position: relative;
+  }
+  #msgFinal {
+	  width: 45vw;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  position: relative;
+  }
+  #contenedorPalabraOculta {
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+  }
