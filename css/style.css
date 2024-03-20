@@ -1,4 +1,4 @@
-{
+ * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -81,3 +81,64 @@
 	  justify-content: center;
 	  align-items: center;
   }
+
+  .horcaWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#imagen0 {
+    width: 100%;
+    height: auto;
+}
+
+#comenzarJuego {
+    width: 110px;
+}
+
+#pista {
+    width: 110px;
+}
+
+p.palabraOculta {
+    text-align: center;
+    color: royalblue;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    position: relative;
+}
+
+#darPista {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#spanPista {
+    height: 50px;
+    text-align: center;
+}
+
+
+.letra {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    font-size: 1.5rem;
+}
+
+.letra:hover {
+    opacity: 0.8;
+}
+
+.letra:disabled {
+    color: rgba(255, 0, 0, 0.5);
+}
+
+.col {
+    width: 50%;
+    text-align: center;
+}
