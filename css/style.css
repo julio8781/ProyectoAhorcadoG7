@@ -3,16 +3,24 @@
 	padding: 0;
 	box-sizing: border-box;
   }
+
   h1 {
 	  text-align: center;
-	  font-size: 40px;
+	  font-size: 70px;
   }
-  .fuentePizarra {
+  .fuentePizarraBlanco {
 	  font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
 	  font-family: "East Sea Dokdo", sans-serif;
 	  font-weight: 900;
 	  font-style: normal;
 	  color: rgb(211, 216, 219);
+  }
+   .fuentePizarraNegro {
+	  font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+	  font-family: "East Sea Dokdo", sans-serif;
+	  font-weight: 900;
+	  font-style: normal;
+	  color: rgb(56, 57, 58);
   }
   .main-container {
 	  max-width: 800px;
@@ -94,11 +102,16 @@
 }
 
 #comenzarJuego {
+	border-radius: 20px;
     width: 110px;
+	grid-column: 1/1;
 }
 
 #pista {
-    width: 110px;
+	width: 110px;
+	height: 40px;
+	grid-column: 2/2;
+	border-radius: 20px;
 }
 
 p.palabraOculta {
@@ -116,8 +129,10 @@ p.palabraOculta {
 }
 
 #spanPista {
-    height: 50px;
+	height: 50px;
     text-align: center;
+	margin-top: 70px;
+	font-size: 2rem;
 }
 
 
@@ -141,4 +156,29 @@ p.palabraOculta {
 .col {
     width: 50%;
     text-align: center;
+	display: grid;
+	display: flex;
+	gap: 25px;
+	/* justify-content: space-around; */
+	/* justify-content: space-evenly; */
+}
+
+#wrapperInicioPista{
+	display: flex;
+	
+	align-items: center;
+	justify-content: center;
+	
+}
+
+button{
+	/* display: inline; */
+	
+}
+
+#flexRow{
+	display: flex;
+	justify-content: center;
+	font-size: 2rem;
+
 }

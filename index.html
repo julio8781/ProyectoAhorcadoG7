@@ -26,19 +26,19 @@
 						class="imagenPizarra"
 					/>
 					<div class="pizarra">
-						<h1 class="fuentePizarra">Juego del ahorcado</h1>
+						<h1 class="fuentePizarraBlanco">Juego del ahorcado</h1>
 						<div class="gridInterfaz">
 							<div class="horcaWrapper">
 								<img id="imagen0" src="/img/muñeco tiza/img7.png" alt="" />
 							</div>
-							<div class="gridMensajes fuentePizarra">
+							<div class="gridMensajes fuentePizarraBlanco">
 								<div class="mensajesWrapper">
 									<div id="msgFinal">
 										<h3 id="msg-final"></h3>
 									</div>
-									<div id="mensajesErrorAcierto">
-										<h2 id="acierto"></h2>
-									</div>
+                  <div  id="spanPista">
+                    <span id="huecoPista">Actividad en la naturaleza</span>
+                  </div>
 								</div>
 								<div id="contenedorPalabraOculta">
 									<p id="palabraOculta"></p>
@@ -50,28 +50,25 @@
 			</div>
 			<div id="gridMunecos"></div>
 			<section>
-				<div id="flexRow">
+				<div class="fuentePizarraNegro" id="flexRow">
 					<p id="intentos">Intentos restantes: <span id="turnos">6</span></p>
 				</div>
 			</section>
 		</main>
 
 		<section id="parteTeclado">
-			<div id="spanPista">
-				<span id="huecoPista">PISTA</span>
-			</div>
-
+       <div id="wrapperInicioPista">
 			<div class="col">
 				<button id="comenzarJuego">Jugar</button>
-				<button id="pista">Dame una pista</button>
-				<span id="huecoPista"></span>
+				<button id="pista">Pista</button>
 			</div>
+        </div>
 
 			<div class="col">
 				<div class="flexRow" id="abcdario"></div>
 			</div>
 			<div class="col"></div>
 		</section>
-    <script src="./JS/script.js"></script>
+    <script type="module" src="./JS/script.js"></script>
   </body>
 </html>
