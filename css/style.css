@@ -1,109 +1,108 @@
- * {
+* {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-  }
+}
 
-  h1 {
-	  text-align: center;
-	  font-size: 70px;
-  }
-  .fuentePizarraBlanco {
-	  font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
-	  font-family: "East Sea Dokdo", sans-serif;
-	  font-weight: 900;
-	  font-style: normal;
-	  color: rgb(211, 216, 219);
-  }
-   .fuentePizarraNegro {
-	  font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
-	  font-family: "East Sea Dokdo", sans-serif;
-	  font-weight: 900;
-	  font-style: normal;
-	  color: rgb(56, 57, 58);
-  }
-  .main-container {
-	  max-width: 800px;
-	  margin: auto;
-  }
-  /* Comportamiento del main para imagenes de fondo*/
-  main {
-	  width: 430px;
-	  place-items: center;
-	  align-content: space-between;
-  }
-  
-  .wrapperImg {
-	  position: relative;
-	  top: 0;
-	  left: 0;
-	  z-index: -1;
-  }
-  
-  .imagenPizarra {
-	  width: 100%;
-	  height: auto;
-  }
-  .pizarra {
-	  display: grid;
-	  grid-template-rows: 10% 90%;
-	  position: absolute;
-	  top: 0;
-	  width: 100%;
-	  height: 100%;
-  }
-  .gridInterfaz {
-	  display: grid;
-	  grid-template-columns: 30% 70%;
-  }
-  .gridMensajes {
-	  display: grid;
-	  grid-template-rows: 50% 50%;
-  }
-  
-  
-  .mensajesWrapper {
-	  height: 100%;
-	  display: flex;
-	  align-items: center;
-	  justify-content: center;
-	  flex-direction: column;
-  }
-  
-  #mensajesErrorAcierto {
-	  width: 100%;
-	  display: flex;
-	  justify-content: center;
-	  align-items: center;
-	  position: relative;
-  }
-  #msgFinal {
-	  width: 45vw;
-	  display: flex;
-	  justify-content: center;
-	  align-items: center;
-	  position: relative;
-  }
-  #contenedorPalabraOculta {
-	  display: flex;
-	  justify-content: center;
-	  align-items: center;
-  }
+h1 {
+	text-align: center;
+	font-size: 70px;
+}
+.fuentePizarraBlanco {
+	font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+	font-family: "East Sea Dokdo", sans-serif;
+	font-weight: 900;
+	font-style: normal;
+	color: rgb(211, 216, 219);
+}
+.fuentePizarraNegro {
+	font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+	font-family: "East Sea Dokdo", sans-serif;
+	font-weight: 900;
+	font-style: normal;
+	color: rgb(56, 57, 58);
+}
+.main-container {
+	max-width: 800px;
+	margin: auto;
+}
+/* Comportamiento del main para imagenes de fondo*/
+main {
+	width: 430px;
+	place-items: center;
+	align-content: space-between;
+}
 
-  .horcaWrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.wrapperImg {
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+.imagenPizarra {
+	width: 100%;
+	height: auto;
+}
+.pizarra {
+	display: grid;
+	grid-template-rows: 10% 90%;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+.gridInterfaz {
+	display: grid;
+	grid-template-columns: 30% 70%;
+}
+.gridMensajes {
+	display: grid;
+	grid-template-rows: 50% 50%;
+}
+
+.mensajesWrapper {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+#mensajesErrorAcierto {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+#msgFinal {
+	width: 45vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+#contenedorPalabraOculta {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.horcaWrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 #imagen0 {
-    width: 100%;
-    height: auto;
+	width: 100%;
+	height: auto;
 }
 
 #comenzarJuego {
 	border-radius: 20px;
-    width: 110px;
+	width: 110px;
 	grid-column: 1/1;
 }
 
@@ -114,48 +113,46 @@
 	border-radius: 20px;
 }
 
-p.palabraOculta {
-    text-align: center;
-    color: royalblue;
-    text-transform: uppercase;
-    letter-spacing: 6px;
-    position: relative;
+#palabraOculta {
+	margin-bottom: 50px;
+	margin-right: 10px;
+	font-size: 2rem;
+	letter-spacing: 8px;
 }
 
 #darPista {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 #spanPista {
 	height: 50px;
-    text-align: center;
+	text-align: center;
 	margin-top: 70px;
 	font-size: 2rem;
 }
 
-
 .letra {
-    border: none;
-    outline: none;
-    background-color: transparent;
-    cursor: pointer;
-    transition: opacity 0.3s ease;
-    font-size: 1.5rem;
+	border: none;
+	outline: none;
+	background-color: transparent;
+	cursor: pointer;
+	transition: opacity 0.3s ease;
+	font-size: 1.5rem;
 }
 
 .letra:hover {
-    opacity: 0.8;
+	opacity: 0.8;
 }
 
 .letra:disabled {
-    color: rgba(255, 0, 0, 0.5);
+	color: rgba(255, 0, 0, 0.5);
 }
 
 .col {
-    width: 50%;
-    text-align: center;
+	width: 50%;
+	text-align: center;
 	display: grid;
 	display: flex;
 	gap: 25px;
@@ -163,22 +160,15 @@ p.palabraOculta {
 	/* justify-content: space-evenly; */
 }
 
-#wrapperInicioPista{
+#wrapperInicioPista {
 	display: flex;
-	
+
 	align-items: center;
 	justify-content: center;
-	
 }
 
-button{
-	/* display: inline; */
-	
-}
-
-#flexRow{
+#flexRow {
 	display: flex;
 	justify-content: center;
 	font-size: 2rem;
-
 }
