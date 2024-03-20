@@ -18,33 +18,60 @@
   </head>
 
   <body>
-   
-    <main id="contenedorPrincipal">
-      <section id="titulo">
-      <h1>Juego del ahorcado</h1>
-      </section>
-      <div id="gridMunecos">
-      <img id="imagen0" src="/img/muñeco tiza/img7.png" alt="" />
-    </div>
-      <section>
-        
-        <p id="palabraOculta"></p>
-        <div id="flexRow">
-          <!-- <p id="intentos">Intentos restantes: <span id="turnos">6</span></p> -->
-        </div>
-        
-        <div class="col"></div>
-      </section>
-    </div>
-  </main>
-  <div id="spanPista">
-  <span id="darPista">MODA</span>
-  </div>
-    <div class="col">
-          <button class="moverBtn" id="comenzarJuego">Jugar</button>
-          <button class="moverBtn"  id="pista">Dame una pista</button>
-          
-        </div>
+   	<div class="pizarraWrapper">
+				<div class="wrapperImg">
+					<img
+						src="/img/fondo.png"
+						alt="es una pizarra"
+						class="imagenPizarra"
+					/>
+					<div class="pizarra">
+						<h1 class="fuentePizarra">Juego del ahorcado</h1>
+						<div class="gridInterfaz">
+							<div class="horcaWrapper">
+								<img id="imagen0" src="/img/muñeco tiza/img7.png" alt="" />
+							</div>
+							<div class="gridMensajes fuentePizarra">
+								<div class="mensajesWrapper">
+									<div id="msgFinal">
+										<h3 id="msg-final"></h3>
+									</div>
+									<div id="mensajesErrorAcierto">
+										<h2 id="acierto"></h2>
+									</div>
+								</div>
+								<div id="contenedorPalabraOculta">
+									<p id="palabraOculta"></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="gridMunecos"></div>
+			<section>
+				<div id="flexRow">
+					<p id="intentos">Intentos restantes: <span id="turnos">6</span></p>
+				</div>
+			</section>
+		</main>
+
+		<section id="parteTeclado">
+			<div id="spanPista">
+				<span id="huecoPista">PISTA</span>
+			</div>
+
+			<div class="col">
+				<button id="comenzarJuego">Jugar</button>
+				<button id="pista">Dame una pista</button>
+				<span id="huecoPista"></span>
+			</div>
+
+			<div class="col">
+				<div class="flexRow" id="abcdario"></div>
+			</div>
+			<div class="col"></div>
+		</section>
     <script src="./JS/script.js"></script>
   </body>
 </html>
