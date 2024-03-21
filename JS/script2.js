@@ -1,18 +1,65 @@
 "use strict";
-import { palabras } from "./palabras.js";
-import {
-	id,
-	generaPalabra,
-	pintarGuiones,
-	numeroAleatorio,
-	palabra,
-	oculta,
-	hueco,
-	buttons,
-} from "./funciones.js";
+
+let palabras = [
+	["atlantico", "Un oceano"],
+	["ordenador", "Una maquina"],
+	["laurel", "Un arbol"],
+	["plaza", "Espacio publico"],
+	["rueda", "Gran invento"],
+	["cereza", "Una fruta"],
+	["petanca", "Un juego"],
+	["higuera", "Un arbol"],
+	["everest", "Un monte"],
+	["relampago", "Antecede al trueno"],
+	["jirafa", "Un animal"],
+	["luxemburgo", "Un pais"],
+	["uruguay", "Un pais"],
+	["ilustracion", "Representacion grafica"],
+	["excursion", "Actividad en la naturaleza"],
+	["empanadilla", "De la panaderia"],
+	["pastel", "De la pasteleria"],
+	["colegio", "Lugar para estudiar"],
+	["carrera", "Competicion"],
+	["mermelada", "Confitura"],
+];
+//603 x 573 = tamaño foto
+// Palabra a averiguar
+let palabra = "";
+// Nº aleatorio
+let numeroAleatorio;
+// Palabra oculta
+let oculta = [];
+// Elemento html de la palabra
+let hueco = document.getElementById("palabraOculta");
+// Botones de letras
+let buttons = document.getElementsByClassName("letra");
+
 let intentos = 6;
+
 const imagen = id("imagen0");
 
+function id(str) {
+	return document.getElementById(str);
+}
+
+const elementoÑ = String.fromCharCode(209).toUpperCase();
+
+// Escoger palabra al azar
+function generaPalabra() {
+	numeroAleatorio = +(Math.random() * (palabras.length - 1)).toFixed(0);
+	console.log(numeroAleatorio);
+	palabra = palabras[numeroAleatorio][0].toUpperCase();
+	console.log(palabra);
+}
+
+function pintarGuiones(num) {
+	for (let i = 0; i < num; i++) {
+		oculta[i] = "_";
+	}
+	hueco.innerHTML = oculta.join("");
+}
+
+// Generar teclado
 function generaABC(a, z) {
 	document.getElementById("abcdario").innerHTML = "";
 	var i = a.charCodeAt(0),
@@ -31,18 +78,17 @@ function generaABC(a, z) {
 	}
 }
 
-// Reseteo del juego
+// Resertear el juego
 function handleReset() {
-	imagen.src = "img/img7.png";
+	imagen.src = "img/muñeco tiza/img7.png";
 	location.reload();
 }
 
+// Comprobar si se ha completado la palabra o no y avisar al usuario con un mensaje
 function compruebaFin() {
 	if (oculta.indexOf("_") == -1) {
 		id("msg-final").innerHTML = "Felicidades !!";
 		id("msg-final").className += "zoom-in";
-		// Si queremos encuadrar la palabra
-		// elementoPalabra.className += " encuadre";
 		for (let i = 0; i < buttons.length; i++) {
 			buttons[i].disabled = true;
 		}
@@ -58,7 +104,6 @@ function compruebaFin() {
 		id("comenzarJuego").addEventListener("click", handleReset);
 	}
 }
-
 function intento(letra) {
 	document.getElementById(letra).disabled = true;
 	if (palabra.indexOf(letra) != -1) {
@@ -77,7 +122,6 @@ function intento(letra) {
 	compruebaFin();
 }
 
-// obtener una pista dentro del array de palabras
 function pista() {
 	id("huecoPista").innerHTML = palabras[numeroAleatorio][1];
 	setTimeout(function () {

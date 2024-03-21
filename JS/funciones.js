@@ -1,5 +1,5 @@
 "use strict";
-import { palabras } from "./palabras.js";
+// import { palabras } from "./palabras.js";
 let numeroAleatorio;
 let palabra = "";
 let oculta = [];
@@ -13,10 +13,6 @@ function generaPalabra() {
 	console.log(palabra);
 }
 
-function Id(str) {
-	return document.getElementById(str);
-}
-
 function pintarGuiones(num) {
 	for (let i = 0; i < num; i++) {
 		oculta[i] = "_";
@@ -24,13 +20,18 @@ function pintarGuiones(num) {
 	hueco.innerHTML = oculta.join("");
 }
 
+function id(str) {
+	return document.getElementById(str);
+}
+
 export {
 	generaPalabra,
-	Id,
+	id,
 	pintarGuiones,
 	numeroAleatorio,
 	palabra,
 	oculta,
 	hueco,
 	buttons,
+	intentos,
 };
