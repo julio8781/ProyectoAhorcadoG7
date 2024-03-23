@@ -86,14 +86,18 @@ function handleReset() {
 // Comprobar si se ha completado la palabra o no y avisar al usuario con un mensaje
 function compruebaFin() {
 	if (oculta.indexOf("_") == -1) {
-		id("winGameOverImg").innerHTML += `<img src="./img/win.png" class="winImg" alt="imagen de victoria">`;
+		id(
+			"winGameOverImg"
+		).innerHTML += `<img src="./img/win.png" class="winImg" alt="imagen de victoria">`;
 		for (let i = 0; i < buttons.length; i++) {
 			buttons[i].disabled = true;
 		}
 		id("comenzarJuego").innerHTML = "Empezar";
 		id("comenzarJuego").addEventListener("click", handleReset);
 	} else if (intentos == 0) {
-		id("winGameOverImg").innerHTML = `<img src="./img/gameOver.png" class="winImg" alt="imagen de victoria">`;
+		id(
+			"winGameOverImg"
+		).innerHTML = `<img src="./img/gameOver.png" class="winImg" alt="imagen de victoria">`;
 		for (let i = 0; i < buttons.length; i++) {
 			buttons[i].disabled = true;
 		}
