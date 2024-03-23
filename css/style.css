@@ -271,6 +271,24 @@ h1 {
 	width: 80vw;
 	font-size: 1.5em;
 }
+
+#mostrarPalabra {
+	font-family: "East Sea Dokdo", sans-serif;
+	color: rgb(255, 255, 255);
+	font-size: clamp(2em, 8vw, 4em);
+	pointer-events: none;
+	display: flex;
+	margin-top: 60px;
+	align-items: flex-start;
+	justify-content: center;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+
+
 footer {
 	background-color: rgba(0, 0, 0, 0.699);
 	color: rgb(189, 185, 185);

@@ -79,40 +79,39 @@ function generaABC(a, z) {
 function handleReset() {
   imagen.src = "img/img7.png";
   location.reload();
+  id("comenzarJuego").disabled = true;
 }
 
 // Comprobar si se ha completado la palabra o no y avisar al usuario con un mensaje
 function compruebaFin() {
-	if (oculta.indexOf("_") == -1) {
-	  for (let i = 0; i < buttons.length; i++) {
-		buttons[i].disabled = true;
-	  }
+  if (oculta.indexOf("_") == -1) {
+    for (let i = 0; i < buttons.length; i++) {
+      buttons[i].disabled = true;
+    }
     id(
       "winGameOverImg"
     ).innerHTML += `<img src="./img/win.png" class="winImg" alt="imagen de victoria">`;
-	setTimeout(() => {
-		id(
-			"winGameOverImg"
-		  ).innerHTML = "";
-	}, 4000);
-	
-    
+    setTimeout(() => {
+      id("winGameOverImg").innerHTML = "";
+    }, 4000);
+
+    id("comenzarJuego").disabled = false
     id("comenzarJuego").innerHTML = "Empezar";
-	id("pista").disabled = true;
+    id("pista").disabled = true;
     id("comenzarJuego").addEventListener("click", handleReset);
   } else if (intentos == 0) {
-	  id(
-		"winGameOverImg"
-	  ).innerHTML = `<img src="./img/gameOver.png" class="winImg" alt="imagen de victoria">`;
-	  setTimeout(() => {
-		id(
-			"winGameOverImg"
-		  ).innerHTML = "";
-	}, 4000);
+    id(
+      "winGameOverImg"
+    ).innerHTML = `<img src="./img/gameOver.png" class="winImg" alt="imagen de victoria">`;
+    id("mostrarPalabra").innerHTML = `tu palabra era ${palabra}`;
+    setTimeout(() => {
+      id("winGameOverImg").innerHTML = "";
+      id("mostrarPalabra").innerHTML = "";
+    }, 4000);
     for (let i = 0; i < buttons.length; i++) {
       buttons[i].disabled = true;
       id("pista").disabled = true;
-
+      id("comenzarJuego").disabled = false
       id("comenzarJuego").innerHTML = "Empezar";
       id("comenzarJuego").addEventListener("click", handleReset);
     }
@@ -149,6 +148,7 @@ id("pista").addEventListener("click", pista);
 // funcion para iniciar los componentes del juego
 function inicio() {
   generaPalabra();
+  id("comenzarJuego").disabled = true
   pintarGuiones(palabra.length);
   generaABC("a", "z");
   intentos = 6;
