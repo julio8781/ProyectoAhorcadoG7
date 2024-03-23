@@ -287,3 +287,78 @@ footer {
 	bottom: 0;
 	width: 100%;
 }
+@media only screen and (min-width: 450px) and (max-width: 899px) {
+	.responsiveContainer {
+		max-width: 900px;
+	}
+
+	.imgFondo2 {
+		width: 100%;
+		height: 300px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	#parteTeclado {
+		font-size: 2rem;
+	}
+
+	.letra {
+		font-size: 2rem;
+	}
+
+	#winGameOverImg {
+		top: 100px;
+	}
+
+	.winImg {
+		max-width: 70%;
+	}
+}
+
+@media only screen and (min-width: 900px) {
+	.responsiveContainer {
+		max-width: 700px;
+	}
+
+	.imgFondo2 {
+		margin: auto;
+		width: 100%;
+		height: 344px;
+	}
+
+	#parteTeclado {
+		width: 100%;
+		height: 100%;
+		font-size: 1rem;
+		position: relative;
+		top: 0;
+		bottom: 0;
+	}
+
+	.colTeclado {
+		margin-right: 20px;
+	}
+
+	.letra {
+		font-size: 2.5rem;
+		/* width: 40px; */
+		font-weight: lighter;
+	}
+
+	body {
+		background-image: url("/img/fondoLluvia.gif");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+	.winImg {
+		max-width: 30%;
+		size: cover;
+		height: auto;
+		z-index: 1;
+		bottom: 200px;
+	}
+}
+
+
