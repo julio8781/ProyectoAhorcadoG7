@@ -37,59 +37,61 @@
 		/>
 		<link rel="stylesheet" href="./css/style.css" />
 	</head>
-
 	<body>
-		<div class="pizarraWrapper">
-			<div class="wrapperImg">
-				<img src="/img/fondo.png" alt="es una pizarra" class="imagenPizarra" />
-				<div class="pizarra">
-					<h1 class="fuentePizarraBlanco">Juego del ahorcado</h1>
-					<div class="gridInterfaz">
-						<div class="horcaWrapper">
-							<img id="imagen0" src="/img/img7.png" alt="" />
-						</div>
-						<div class="gridMensajes fuentePizarraBlanco">
-							<div class="mensajesWrapper">
-								<div id="msgFinal">
-									<h3 id="msg-final"></h3>
-								</div>
-								<!-- <div id="mensajesErrorAcierto">
-									<h2 id="acierto"></h2>
-								</div> -->
-								<div id="spanPista">
-									<span id="huecoPista"></span>
-								</div>
+		<main class="responsiveContainer">
+			<div class="pizarraWrapper">
+				<div class="wrapperImg">
+					<img
+						src="/img/fondo.png"
+						alt="es una pizarra"
+						class="imagenPizarra"
+					/>
+					<div class="pizarra">
+						<h1 class="fuentePizarraBlanco">Juego del ahorcado</h1>
+						<div class="gridInterfaz">
+							<div class="horcaWrapper">
+								<img id="imagen0" src="/img/muñeco tiza/img7.png" alt="" />
 							</div>
-							<div id="contenedorPalabraOculta">
-								<p id="palabraOculta"></p>
+							<div class="gridMensajes fuentePizarraBlanco">
+								<div class="mensajesWrapper">
+									<div id="spanPista">
+										<span id="huecoPista"></span>
+									</div>
+								</div>
+								<div id="contenedorPalabraOculta">
+									<p id="palabraOculta"></p>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<section>
-			<div class="fuentePizarraNegro" id="flexRow">
-				<p id="intentos">Intentos restantes: <span id="turnos">6</span></p>
-			</div>
-		</section>
-		<section id="parteTeclado">
-			<div class="wrapperInicioPista">
-				<div class="col fuentePizarraNegro gridBotones">
-					<button id="comenzarJuego" class="botonesOpciones">Jugar</button>
-					<button id="pista" class="botonesOpciones">Pista</button>
+			<section>
+				<div class="fuentePizarraOtro" id="flexRow">
+					<p class="z-indexP" id="intentos" class="colorIntentos">
+						Intentos restantes: <span class="z-indexP" id="turnos">6</span>
+					</p>
 				</div>
-				<div id="winGameOverImg">
-					<!-- <img class="winImg" src="./img/win.png" alt="" /> -->
+			</section>
+			<div>
+				<div class="wrapperInicioPista">
+					<div class="col fuentePizarraNegro gridBotones">
+						<button id="comenzarJuego" class="botonesOpciones">Jugar</button>
+						<button id="pista" class="botonesOpciones">Pista</button>
+					</div>
 				</div>
+				<section id="parteTeclado">
+					<div class="wrapperTeclado">
+						<img class="imgFondo2" src="/img/fondo2.jpg" alt="" />
+						<div class="colTeclado wrapperTeclas absolute">
+							<div class="flexRowTeclado" id="abcdario"></div>
+						</div>
+					</div>
+				</section>
+				<div id="winGameOverImg"></div>
 			</div>
-			<div class="wrapperTeclado">
-				<img class="imgFondo2" src="/img/fondo2.jpg" alt="" />
-				<div class="colTeclado wrapperTeclas absolute">
-					<div class="flexRowTeclado" id="abcdario"></div>
-				</div>
-			</div>
-		</section>
-		<script src="./JS/script2.js"></script>
+		</main>
+		<footer><h2>Proyecto ahorcado Grupo F - Hack a Boss</h2></footer>
+		<script src="./JS/script.js"></script>
 	</body>
 </html>

@@ -22,7 +22,6 @@ let palabras = [
 	["carrera", "Competicion"],
 	["mermelada", "Confitura"],
 ];
-//603 x 573 = tamaño foto
 // Palabra a averiguar
 let palabra = "";
 // Nº aleatorio
@@ -35,7 +34,7 @@ let hueco = document.getElementById("palabraOculta");
 let buttons = document.getElementsByClassName("letra");
 
 let intentos = 6;
-
+// Imagen ahorcado
 const imagen = id("imagen0");
 
 function id(str) {
@@ -80,23 +79,21 @@ function generaABC(a, z) {
 
 // Resertear el juego
 function handleReset() {
-	imagen.src = "img/muñeco tiza/img7.png";
+	imagen.src = "img/img7.png";
 	location.reload();
 }
 
 // Comprobar si se ha completado la palabra o no y avisar al usuario con un mensaje
 function compruebaFin() {
 	if (oculta.indexOf("_") == -1) {
-		id("msg-final").innerHTML = "Felicidades !!";
-		id("msg-final").className += "zoom-in";
+		id("winGameOverImg").innerHTML += `<img src="./img/win.png" class="winImg" alt="imagen de victoria">`;
 		for (let i = 0; i < buttons.length; i++) {
 			buttons[i].disabled = true;
 		}
 		id("comenzarJuego").innerHTML = "Empezar";
 		id("comenzarJuego").addEventListener("click", handleReset);
 	} else if (intentos == 0) {
-		id("msg-final").innerHTML = "Game Over";
-		id("msg-final").className += "zoom-in";
+		id("winGameOverImg").innerHTML = `<img src="./img/gameOver.png" class="winImg" alt="imagen de victoria">`;
 		for (let i = 0; i < buttons.length; i++) {
 			buttons[i].disabled = true;
 		}
